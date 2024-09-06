@@ -1,0 +1,367 @@
+@font-face {
+    font-family: kana-regular;
+    src: url(../fonts/kanakira-regular.ttf);
+}
+
+@font-face {
+    font-family: kana-bold;
+    src: url(../fonts/kanakira-bold.ttf);
+}
+
+@font-face {
+    font-family: syne;
+    src: url(../fonts/Syne-VariableFont_wght.ttf);
+}
+
+html,
+body {
+    font-family: syne;
+    scroll-behavior: smooth;
+    background-color: #000;
+    color: white;
+}
+
+/*Estilos del menú*/
+.navbar {
+    background-color: transparent !important;
+    backdrop-filter: blur(30px);
+    z-index: 1050;
+    box-shadow: rgba(145, 145, 145, 0.35) 0px 1px 1px;
+}
+
+
+
+.navbar .styleLogo {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    font-family: kana-bold;
+    font-weight: bold;
+
+}
+
+.navbar-nav .nav-link2 {
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
+    /* Agregamos transiciones para el color de texto y el color de fondo */
+    font-size: 19px;
+    color: white;
+    border-radius: 5px;
+    /* Agregamos bordes redondeados */
+    padding: 5px 15px;
+    font-family: syne;
+}
+
+.navbar-nav .nav-link2:hover {
+    color: #c9c9c9;
+    /* Cambiamos el color del texto al hacer hover */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 29px;
+}
+
+
+/*Estilos del video*/
+header {
+    margin-top: -80px;
+    background: rgb(118, 70, 184);
+    background: linear-gradient(171deg, rgba(118, 70, 184, 1) 0%, rgba(0, 0, 0, 1) 60%);
+    height: 100vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+header .container {
+    z-index: 2;
+}
+
+header .overlay {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.overlay img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(254, 254, 254, 0) 0%, rgb(0, 0, 0) 100%);
+    pointer-events: none;
+    /* Permite hacer clic en la imagen a través del degradado */
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+
+    header video {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .heroTitle {
+        font-size: 3rem;
+    }
+}
+
+.heroTitle {
+    font-size: 60px;
+    font-family: kana-bold;
+}
+
+p {
+    color: rgb(185, 185, 185);
+    padding-right: 40px;
+    font-size: 22px;
+}
+
+.btn-pers {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-family: syne;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgb(75, 75, 75);
+}
+
+.btn-pers:hover {
+    color: white;
+    backdrop-filter: blur(30px);
+    transition: 0.1s;
+    box-shadow: rgba(105, 105, 105, 0.24) 0px 0px 60px;
+}
+
+.fotoFin {
+    width: 400px;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:540px) {
+    .fotoFin {
+        visibility: hidden;
+    }
+}
+
+.bg-gradient-1 {
+    background: rgb(118, 70, 184);
+    background: linear-gradient(350deg, rgba(118, 70, 184, 1) 0%, rgba(0, 0, 0, 1) 60%);
+}
+
+.box-conter {
+    background-color: rgb(36, 29, 36) !important;
+    backdrop-filter: blur(200px);
+
+}
+
+.titleBox {
+    font-family: kana-bold;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 40px;
+}
+
+.counter {
+    display: block;
+    font-size: 60px;
+    font-family: syne;
+    text-align: center;
+}
+
+.user-review {
+    background-color: rgb(36, 29, 36) !important;
+    backdrop-filter: blur(200px);
+}
+
+.user-review-name {
+    font-family: kana-regular;
+}
+
+.user-review p {
+    font-size: 15px;
+}
+
+span i {
+    color: rgb(255, 255, 29);
+}
+
+.user-review-text {
+    padding: 5px;
+    font-style: italic;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-header {
+    z-index: 2;
+    height: 50px;
+}
+
+.accordion-button {
+    background-color: #000;
+    color: white;
+    font-family: kana-regular;
+    font-size: 17px;
+    border: none;
+    z-index: 50;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: rgb(36, 29, 36) !important;
+    color: white;
+    /* Cambia esto al color deseado del texto */
+}
+
+.accordion-button::after {
+    filter: brightness(0) invert(2);
+    /* Aplica un filtro para cambiar el color de la flechita */
+}
+
+/* Cambiar el color de la flechita cuando el acordeón está expandido */
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(3);
+    /* Aplica un filtro para cambiar el color de la flechita */
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    /* Elimina el resplandor azul cuando se enfoca el botón */
+    border-color: #e2e6ea;
+    /* Cambia esto al color deseado del borde cuando está enfocado */
+}
+
+.accordion-collapse {
+    background-color: rgb(36, 29, 36) !important;
+    backdrop-filter: blur(30px);
+    color: rgb(185, 185, 185);
+    z-index: 50;
+}
+
+.pricePack {
+    font-size: 40px;
+    /* Tamaño de fuente, ajusta según sea necesario */
+    font-weight: bold;
+    color: #d7d7d7;
+    /* Color del texto */
+    margin: 110px 0;
+    /* Espaciado alrededor del precio */
+    margin-bottom: 110px;
+}
+
+.pricePack sub {
+    font-size: 10px;
+}
+
+.packText {
+    font-size: 15px;
+}
+
+.PackList {
+    color: rgb(185, 185, 185);
+    font-size: 15px;
+}
+
+.PackList li {
+    margin-top: 5px;
+}
+
+.textnews {
+    font-family: 5px;
+    font-size: 17px;
+}
+
+@keyframes blink {
+    0% {
+        background-color: red;
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.5);
+    }
+
+    50% {
+        background-color: transparent;
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+    }
+
+    100% {
+        background-color: red;
+        box-shadow: 0 0 0 rgba(255, 0, 0, 0.5);
+    }
+}
+
+.roundCircleNews {
+    display: inline-block;
+    width: 20px;
+    /* Tamaño del círculo */
+    height: 20px;
+    /* Tamaño del círculo */
+    border-radius: 50%;
+    /* Forma circular */
+    background-color: red;
+    /* Color del círculo */
+    animation: blink 1s infinite;
+    /* Animación de parpadeo */
+    vertical-align: middle;
+    /* Alineación vertical en el medio del texto */
+    margin-top: -30px;
+    /* Ajusta esta propiedad según sea necesario */
+}
+
+.box-conter-regis {
+    border-radius: 20px;
+    background-color: rgb(36, 29, 36) !important;
+    backdrop-filter: blur(200px);
+
+}
+
+.textAbout {
+    font-size: 17px;
+}
+
+.TitleTerms{
+    font-family: kana-bold;
+    font-size: 50px;
+}
+
+.textTerms{
+    font-size: 20px;
+}
+
+.subtitleterms{
+    font-size: 30px;
+    font-family: kana-bold;
+}
+
+.subTNum{
+    padding: 20px;
+    color:rgba(118, 70, 184, 1);
+    border-radius: 50%;
+    font-size: 45px;
+}
